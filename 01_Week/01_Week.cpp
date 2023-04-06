@@ -31,6 +31,18 @@ int main()
     std::cout << "\n iPrt address = " << &iPtr;
     std::cout << "\n Size of iPtr = " << sizeof(iPtr);
     std::cout << "\n Value iPtr points to is " << *(iPtr - 8);
+
+    // Heap memory
+    char* chTemp = NULL;
+    chTemp = (char*)malloc(20);
+    memset(chTemp, '\0', 20);
+    memset(chTemp, NULL, 20);
+
+    // Do stuff with the memory, then
+    free(chTemp);
+    chTemp = NULL; // Good Pratice
+
+    std::cout << "\n\n End of Program.";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
