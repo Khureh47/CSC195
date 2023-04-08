@@ -21,8 +21,16 @@ int main()
         numEmployees = MAXEM;
 
     for (int iCount = 0; iCount < numEmployees; iCount++) {
-        // Call read for each employee
+        cout << " Employee " << iCount + 1;
+        workers[iCount].Write();
     }
+
+    for (int iCount = 0; iCount < numEmployees; iCount++) {
+        cout << "\n\n Employee " << iCount + 1 << " details";
+        workers[iCount].Read();
+    }
+
+    cout << "\n\n Number of employees: " << numEmployees << "\n\n";
 
     //workers[0].age = 23;
     //workers[0].Read();
